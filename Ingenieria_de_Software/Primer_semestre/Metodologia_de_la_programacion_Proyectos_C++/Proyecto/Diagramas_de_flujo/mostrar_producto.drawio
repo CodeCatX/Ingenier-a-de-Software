@@ -1,0 +1,91 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/25.0.2 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="25.0.2">
+  <diagram name="Página-1" id="XoVfdVzmXT0FCT3dWPdM">
+    <mxGraphModel dx="1050" dy="621" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="1">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="gqJFN9A-wY2o9Y6DUlTp-1" value="INICIO - mostrar_producto" style="ellipse;whiteSpace=wrap;rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;textShadow=1;strokeWidth=1;shadow=1;html=1;horizontal=1;fontSize=11;fontStyle=0;spacing=2;" parent="1" vertex="1">
+          <mxGeometry x="300" y="10" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="gqJFN9A-wY2o9Y6DUlTp-11" value="Escribir(&quot;Proveedor: &quot;, galleta[i].proveedor);" style="rounded=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;textShadow=1;strokeWidth=1;shadow=1;html=1;horizontal=1;fontSize=11;fontStyle=0;spacing=2;" parent="1" vertex="1">
+          <mxGeometry x="210" y="120" width="320" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gqJFN9A-wY2o9Y6DUlTp-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;fillColor=#dae8fc;strokeColor=#6c8ebf;textShadow=1;strokeWidth=1;shadow=1;html=1;horizontal=1;fontSize=11;fontStyle=0;spacing=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="369.79" y="90" as="sourcePoint" />
+            <mxPoint x="370" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v9uKrOlxw0CcSmxydKH0-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;fillColor=#dae8fc;strokeColor=#6c8ebf;textShadow=1;strokeWidth=1;shadow=1;html=1;horizontal=1;fontSize=11;fontStyle=0;spacing=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="369.83000000000004" y="160" as="sourcePoint" />
+            <mxPoint x="370.04" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6mAZskGcyzbH1CX3120c-1" value="galleta[i].clave != &quot;&quot;" style="rhombus;whiteSpace=wrap;rounded=1;fillColor=#f8cecc;strokeColor=#b85450;textShadow=1;strokeWidth=1;shadow=1;html=1;horizontal=1;fontSize=11;fontStyle=0;spacing=2;" parent="1" vertex="1">
+          <mxGeometry x="310" y="190" width="120" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="6mAZskGcyzbH1CX3120c-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;fillColor=#dae8fc;strokeColor=#6c8ebf;textShadow=1;strokeWidth=1;shadow=1;html=1;horizontal=1;fontSize=11;fontStyle=0;spacing=2;entryX=0.476;entryY=-0.007;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="6mAZskGcyzbH1CX3120c-5" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="310" y="240" as="sourcePoint" />
+            <mxPoint x="180" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6mAZskGcyzbH1CX3120c-4" value="SI" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="6mAZskGcyzbH1CX3120c-3" vertex="1" connectable="0">
+          <mxGeometry x="-0.0581" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6mAZskGcyzbH1CX3120c-5" value="Escribir(&quot;Clave: &quot;, galleta[i].clave);" style="rounded=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;textShadow=1;strokeWidth=1;shadow=1;html=1;horizontal=1;fontSize=11;fontStyle=0;spacing=2;" parent="1" vertex="1">
+          <mxGeometry x="10" y="270" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="6mAZskGcyzbH1CX3120c-8" value="Escribir(&quot;Nombre del producto: &quot;, galleta[i].nombre);" style="rounded=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;textShadow=1;strokeWidth=1;shadow=1;html=1;horizontal=1;fontSize=11;fontStyle=0;spacing=2;" parent="1" vertex="1">
+          <mxGeometry x="210" y="350" width="320" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="6mAZskGcyzbH1CX3120c-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;fillColor=#dae8fc;strokeColor=#6c8ebf;textShadow=1;strokeWidth=1;shadow=1;html=1;horizontal=1;fontSize=11;fontStyle=0;spacing=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" target="6mAZskGcyzbH1CX3120c-8" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="369.79" y="285" as="sourcePoint" />
+            <mxPoint x="370" y="315" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6mAZskGcyzbH1CX3120c-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;fillColor=#dae8fc;strokeColor=#6c8ebf;textShadow=1;strokeWidth=1;shadow=1;html=1;horizontal=1;fontSize=11;fontStyle=0;spacing=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="106" y="312" as="sourcePoint" />
+            <mxPoint x="368" y="326" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="106" y="326" />
+              <mxPoint x="278" y="326" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6mAZskGcyzbH1CX3120c-11" value="Escribir(&quot;Cantidad: &quot;, galleta[i].cantidad);" style="rounded=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;textShadow=1;strokeWidth=1;shadow=1;html=1;horizontal=1;fontSize=11;fontStyle=0;spacing=2;" parent="1" vertex="1">
+          <mxGeometry x="210" y="420" width="320" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="6mAZskGcyzbH1CX3120c-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;fillColor=#dae8fc;strokeColor=#6c8ebf;textShadow=1;strokeWidth=1;shadow=1;html=1;horizontal=1;fontSize=11;fontStyle=0;spacing=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="369.79" y="390" as="sourcePoint" />
+            <mxPoint x="370" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6mAZskGcyzbH1CX3120c-13" value="Escribir(&quot;Precio: $&quot;, galleta[i].precio);" style="rounded=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;textShadow=1;strokeWidth=1;shadow=1;html=1;horizontal=1;fontSize=11;fontStyle=0;spacing=2;" parent="1" vertex="1">
+          <mxGeometry x="210" y="490" width="320" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="6mAZskGcyzbH1CX3120c-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;fillColor=#dae8fc;strokeColor=#6c8ebf;textShadow=1;strokeWidth=1;shadow=1;html=1;horizontal=1;fontSize=11;fontStyle=0;spacing=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="369.79" y="460" as="sourcePoint" />
+            <mxPoint x="370" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6mAZskGcyzbH1CX3120c-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;fillColor=#dae8fc;strokeColor=#6c8ebf;textShadow=1;strokeWidth=1;shadow=1;html=1;horizontal=1;fontSize=11;fontStyle=0;spacing=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="369.79" y="530" as="sourcePoint" />
+            <mxPoint x="370" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5Yme4VC73nVY4Tor0vv-1" value="INICIO - mostrar_producto" style="ellipse;whiteSpace=wrap;rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;textShadow=1;strokeWidth=1;shadow=1;html=1;horizontal=1;fontSize=11;fontStyle=0;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="300" y="560" width="140" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

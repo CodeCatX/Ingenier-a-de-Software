@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int ncalif = 0;
+    int c;
+    while (c >= 0) {
+        cin >> c;
+        ncalif++;
+    }
+
+        cout << ncalif;
+
+return 0;
+}

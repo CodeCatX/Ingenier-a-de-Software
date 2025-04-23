@@ -1,0 +1,37 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/25.0.2 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="25.0.2">
+  <diagram name="Página-1" id="XoVfdVzmXT0FCT3dWPdM">
+    <mxGraphModel dx="576" dy="337" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="1">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="zbPfbXJBPThH78bdl0lX-3" value="INICIO - extraer_letras_proveedor" style="ellipse;whiteSpace=wrap;rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;textShadow=1;strokeWidth=1;shadow=1;html=1;horizontal=1;fontSize=11;fontStyle=0;spacing=2;" parent="1" vertex="1">
+          <mxGeometry x="300" y="10" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="zbPfbXJBPThH78bdl0lX-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;textShadow=1;strokeWidth=1;shadow=1;html=1;horizontal=1;fontSize=11;fontStyle=0;spacing=2;" parent="1" source="zbPfbXJBPThH78bdl0lX-4" target="zbPfbXJBPThH78bdl0lX-8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zbPfbXJBPThH78bdl0lX-4" value="i &amp;lt; 2" style="rhombus;whiteSpace=wrap;rounded=1;fillColor=#f8cecc;strokeColor=#b85450;textShadow=1;strokeWidth=1;shadow=1;html=1;horizontal=1;fontSize=11;fontStyle=0;spacing=2;" parent="1" vertex="1">
+          <mxGeometry x="330" y="120" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="zbPfbXJBPThH78bdl0lX-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;entryX=0.5;entryY=0.036;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#dae8fc;strokeColor=#6c8ebf;textShadow=1;strokeWidth=1;shadow=1;html=1;horizontal=1;fontSize=11;fontStyle=0;spacing=2;" parent="1" source="zbPfbXJBPThH78bdl0lX-3" target="zbPfbXJBPThH78bdl0lX-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="diIYHUBXAm4dYaVSVekb-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;fillColor=#dae8fc;strokeColor=#6c8ebf;textShadow=1;strokeWidth=1;shadow=1;html=1;horizontal=1;fontSize=11;fontStyle=0;spacing=2;" edge="1" parent="1" source="zbPfbXJBPThH78bdl0lX-8" target="diIYHUBXAm4dYaVSVekb-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zbPfbXJBPThH78bdl0lX-8" value="letras = letras + proveedor[i] - 32" style="rounded=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;textShadow=1;strokeWidth=1;shadow=1;html=1;horizontal=1;fontSize=11;fontStyle=0;spacing=2;" parent="1" vertex="1">
+          <mxGeometry x="310" y="230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="diIYHUBXAm4dYaVSVekb-1" value="FIN- extraer_letras_proveedor" style="ellipse;whiteSpace=wrap;rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;textShadow=1;strokeWidth=1;shadow=1;html=1;horizontal=1;fontSize=11;fontStyle=0;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="300" y="450" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="diIYHUBXAm4dYaVSVekb-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;fillColor=#dae8fc;strokeColor=#6c8ebf;textShadow=1;strokeWidth=1;shadow=1;html=1;horizontal=1;fontSize=11;fontStyle=0;spacing=2;" edge="1" parent="1" source="diIYHUBXAm4dYaVSVekb-2" target="diIYHUBXAm4dYaVSVekb-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="diIYHUBXAm4dYaVSVekb-2" value="REGRESA letras" style="rounded=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;textShadow=1;strokeWidth=1;shadow=1;html=1;horizontal=1;fontSize=11;fontStyle=0;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="310" y="340" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
