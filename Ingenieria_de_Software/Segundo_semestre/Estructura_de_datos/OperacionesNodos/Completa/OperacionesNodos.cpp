@@ -1,16 +1,15 @@
 #include <iostream>
 using namespace std;
 
-struct Nodo
-{
-    int valor;
+struct Nodo {
+    int dato;
     Nodo *sig;
 };
 
 Nodo *crearNodo(int dato)
 {
     Nodo *ap = new Nodo;
-    ap->valor = dato;
+    ap->dato = dato;
     ap->sig = NULL;
     return ap;
 }
@@ -44,13 +43,13 @@ void insertarRecursivo(Nodo *&nodo, int dato)
 }
 
 void insertarOrdenado(Nodo *&head, int value){
-    if (estaVacia(head) || head -> valor > value){
+    if (estaVacia(head) || head -> dato > value){
         Nodo *nuevo = crearNodo(value);
         nuevo -> sig = head;
         head = nuevo;
     } else {
         Nodo *actual = head;
-        while (!estaVacia(actual) && !estaVacia(actual -> sig) && actual -> sig -> valor <= value){
+        while (!estaVacia(actual) && !estaVacia(actual -> sig) && actual -> sig -> dato <= value){
             actual = actual -> sig;
         }
         Nodo *nuevo = crearNodo(value);
@@ -61,9 +60,9 @@ void insertarOrdenado(Nodo *&head, int value){
 
 
 void insertarOrdenadoRecursivo(Nodo *&head, int dato) {
-    if (head == NULL || head -> valor >= dato) {
+    if (head == NULL || head -> dato >= dato) {
         Nodo *nuevo = new Nodo;
-        nuevo -> valor = dato;
+        nuevo -> dato = dato;
         nuevo -> sig = head;
         head = nuevo;
     } else {
@@ -75,7 +74,7 @@ void imprimirRecursivo(Nodo *nodo)
 {
     if (nodo != NULL)
     {
-        cout << nodo->valor;
+        cout << nodo->dato;
         if (nodo->sig != NULL)
         {
             cout << ", ";
@@ -88,7 +87,7 @@ bool existeRecursivo(Nodo *nodo, int dato)
 {
     if (nodo != NULL)
     {
-        if (nodo->valor == dato)
+        if (nodo->dato == dato)
         {
             return true;
         }
@@ -104,7 +103,7 @@ void eliminarNodo(Nodo *&head, int dato) {
     Nodo *actual = head;
     Nodo *anterior = NULL;
     while (actual != NULL) {
-        if (actual -> valor == dato) {
+        if (actual -> dato == dato) {
             Nodo *aux = actual;
             actual = actual -> sig;
 
@@ -114,8 +113,9 @@ void eliminarNodo(Nodo *&head, int dato) {
                 anterior -> sig = actual;
             }
 
-            cout << "Se elimino el nodo con el valor " << aux -> valor << endl;
+            cout << "Se elimino el nodo con el valor " << aux -> dato << endl;
             delete aux;
+            eliminarNodo(head -> sig, dato);
         } else {
             anterior = actual;
             actual = actual -> sig;
@@ -126,7 +126,7 @@ void eliminarNodo(Nodo *&head, int dato) {
 void eliminarNodoRecursivo(Nodo *&head, int dato)
 {
     if(head != NULL) {
-        if(head->valor == dato){
+        if(head->dato == dato){
             Nodo *aux = head;
             head = head ->sig;
             delete aux;
@@ -144,7 +144,7 @@ int posicion(Nodo *head, int dato) {
     if (head == NULL) {
         return -1;
     }
-    if (head -> valor == dato) {
+    if (head -> dato == dato) {
         return 0;
     } else {
         int result = posicion(head -> sig, dato);
@@ -160,8 +160,8 @@ int posicion(Nodo *head, int dato) {
 que contenga el dato proporcionado y modifica su valor por el 
 nuevo dato. Con recursión. */
 void modificar(Nodo *&head, int dato, int nuevoDato) {
-    if (head -> valor == dato) {
-        head -> valor = nuevoDato;
+    if (head -> dato == dato) {
+        head -> dato = nuevoDato;
     } else {
         return modificar(head -> sig, dato, nuevoDato);
     }
@@ -172,7 +172,7 @@ procedimiento que copie una lista a otra, eliminando los duplicados,
 primero sin recursión y después utilizando recursión.*/
 void eliminarDuplicadosRecursivo(Nodo *lista1, Nodo *&lista2) {
     if (lista1 != NULL) {
-        insertarOrdenado(lista2, lista1 -> valor);
+        insertarOrdenado(lista2, lista1 -> dato);
         eliminarDuplicadosRecursivo(lista1, lista2);
     }
 }

@@ -3,14 +3,14 @@ using namespace std;
 
 struct Nodo
 {
-    int valor;
+    int dato;
     Nodo *sig;
 };
 
 Nodo *crearNodo(int dato)
 {
     Nodo *ap = new Nodo;
-    ap->valor = dato;
+    ap->dato = dato;
     ap->sig = NULL;
     return ap;
 }
@@ -46,7 +46,7 @@ void insertarRecursivo(Nodo *&nodo, int dato)
 void insertarOrdenado(Nodo *&head, int dato) {
     // 1. Crear el nuevo nodo
     Nodo *nuevo = new Nodo;
-    nuevo->valor = dato;
+    nuevo->dato = dato;
     nuevo->sig = NULL;  // Inicialmente, no apunta a ningún nodo
 
     // 2. Si la lista está vacía, el nuevo nodo se convierte en la cabeza
@@ -54,7 +54,7 @@ void insertarOrdenado(Nodo *&head, int dato) {
         head = nuevo;
     } 
     // 3. Si el nuevo dato es menor o igual al dato del primer nodo, inserta al inicio
-    else if (dato <= head->valor) {
+    else if (dato <= head->dato) {
         nuevo->sig = head;
         head = nuevo;
     } 
@@ -63,7 +63,7 @@ void insertarOrdenado(Nodo *&head, int dato) {
         Nodo *anterior = head;        // Empieza en la cabeza
         Nodo *actual = head->sig;       // El nodo siguiente a la cabeza
         // Recorre la lista hasta encontrar el primer nodo cuyo valor sea mayor o igual a 'dato'
-        while (actual != NULL && actual->valor < dato) {
+        while (actual != NULL && actual->dato < dato) {
             anterior = actual;
             actual = actual->sig;
         }
@@ -75,9 +75,9 @@ void insertarOrdenado(Nodo *&head, int dato) {
 
 
 void insertarOrdenadoRecursivo(Nodo *&head, int dato) {
-    if (head == NULL || head -> valor >= dato) {
+    if (head == NULL || head -> dato >= dato) {
         Nodo *nuevo = new Nodo;
-        nuevo -> valor = dato;
+        nuevo -> dato = dato;
         nuevo -> sig = head;
         head = nuevo;
     } else {
@@ -89,7 +89,7 @@ void imprimirRecursivo(Nodo *nodo)
 {
     if (nodo != NULL)
     {
-        cout << nodo->valor;
+        cout << nodo->dato;
         if (nodo->sig != NULL)
         {
             cout << ", ";
@@ -102,7 +102,7 @@ bool existeRecursivo(Nodo *nodo, int dato)
 {
     if (nodo != NULL)
     {
-        if (nodo->valor == dato)
+        if (nodo->dato == dato)
         {
             return true;
         }
@@ -118,7 +118,7 @@ void eliminarNodo(Nodo *&head, int dato) {
     Nodo *actual = head;
     Nodo *anterior = NULL;
     while (actual != NULL) {
-        if (actual -> valor == dato) {
+        if (actual -> dato == dato) {
             Nodo *aux = actual;
             actual = actual -> sig;
 
@@ -128,7 +128,7 @@ void eliminarNodo(Nodo *&head, int dato) {
                 anterior -> sig = actual;
             }
 
-            cout << "Se elimino el nodo con el valor " << aux -> valor << endl;
+            cout << "Se elimino el nodo con el valor " << aux -> dato << endl;
             delete aux;
         } else {
             anterior = actual;
@@ -140,7 +140,7 @@ void eliminarNodo(Nodo *&head, int dato) {
 void eliminarNodoRecursivo(Nodo *&head, int dato)
 {
     if(head != NULL) {
-        if(head->valor == dato){
+        if(head->dato == dato){
             Nodo *aux = head;
             head = head ->sig;
             delete aux;

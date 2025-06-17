@@ -2,14 +2,14 @@
 using namespace std;
 
 struct Nodo{
-    int valor;
-    Nodo *siguiente;
+    int dato;
+    Nodo *sig;
 };
 
 Nodo *crearNodo(int valorElemento) {
     Nodo *ap = new Nodo;
-    ap -> valor = valorElemento;
-    ap -> siguiente = nullptr;
+    ap -> dato = valorElemento;
+    ap -> sig = nullptr;
     return ap;
 }
 
@@ -21,7 +21,7 @@ void inicializar(Nodo *&frente, Nodo *&final) {
 int consultarFrente(Nodo *frente) {
     if (frente != nullptr) {
         cout << "El frente es: ";
-        return frente -> valor;
+        return frente -> dato;
     } else {
         cout << endl << "Cola vacía " << endl;
         return -1;
@@ -37,11 +37,11 @@ bool vacia(Nodo *frente) {
 }
 
 int sacar(Nodo *&frente, Nodo *& final) {
-    Nodo *aux = crearNodo(frente -> valor);
-    int elemento = aux -> valor;
-    frente = frente -> siguiente;
+    Nodo *aux = frente;
+    int elemento = aux -> dato;
+    frente = frente -> sig;
     if (frente == nullptr) {
-        final = nullptr;
+        final = frente;
     }
     delete aux;
     return elemento;
@@ -52,15 +52,15 @@ void agregar(Nodo *&frente, Nodo *&final, int elemento) {
     if (final == nullptr) {
         frente = aux;
     } else {
-        final -> siguiente = aux;
+        final -> sig = aux;
     }
     final = aux;
 }
 
 void imprimirLista(Nodo *nodo) {
     if (nodo != nullptr) {
-        cout << nodo -> valor << " ";
-        imprimirLista(nodo -> siguiente);
+        cout << nodo -> dato << " ";
+        imprimirLista(nodo -> sig);
     } else {
         cout << "eNulo" << " ";
     }
@@ -71,7 +71,7 @@ void imprimirLista(Nodo *nodo) {
 ///////////////////////////////
 int tamanioLista(Nodo *frente) {
     if (frente != nullptr) {
-        return 1 + tamanioLista(frente -> siguiente);
+        return 1 + tamanioLista(frente -> sig);
     } else {
         return 0;
     }

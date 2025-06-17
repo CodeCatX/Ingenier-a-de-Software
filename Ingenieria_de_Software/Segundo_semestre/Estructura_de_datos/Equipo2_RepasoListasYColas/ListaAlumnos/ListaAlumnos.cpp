@@ -1,5 +1,4 @@
 #include <iostream>
-#include <conio.h>
 
 using namespace std;
 
@@ -43,8 +42,6 @@ void printList(Nodo *n){ // funcion auxiliar para imprimir una lista de alumnos
        cout << "Nombre: " << n -> name << endl;
        cout << "Promedio: " << n -> average << endl;
        printList(n -> nextNdo);
-    } else {
-        cout << "Lista vacia" << endl;
     }
 }
 
@@ -115,12 +112,14 @@ void requireStudents(Nodo *&studentsList, const int Max_Students){
     for (int i = 0; i < Max_Students; i++){
         cout << "--[Ingresa los datos del estudiante #" << i + 1 << "]--" << endl;
         string name;
-        cout << "Nombre:";
+        cout << "Nombre: ";
         getline(cin, name);
         cout << "Promedio: ";
         float average;
         cin >> average;
+        cin.ignore();
         insert(studentsList, name, average);
+        cout << endl;
     }
 }
 
@@ -154,7 +153,7 @@ void requireReturToMenu(int &state){
 
 
 void start(Nodo *&studentsList, Nodo *&ordinaryList, Nodo *&extraordinaryList){
-    const int Max_Students = 15;
+    const int Max_Students = 7;
     int state = 0;
 
     showHeader();
@@ -212,8 +211,5 @@ int main(){
     init(studentsList, ordinaryList, extraordinaryList);
     start(studentsList, ordinaryList, extraordinaryList);
     cleanup(studentsList, ordinaryList, extraordinaryList);
-
-    cout << endl << "Pulse una tecla para cerrar el programa...";
-    getch();
     return 0;
 }

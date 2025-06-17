@@ -4,7 +4,7 @@ using namespace std;
 struct Nodo {
     string nombre;
     int calificacion;
-    Nodo *siguiente;
+    Nodo *sig;
 };
 
 void inicializar(Nodo *&frente, Nodo *&frenteOrdinario, Nodo *&frenteExtraordinario) {
@@ -17,7 +17,7 @@ Nodo *crearNodo(string nombreAlumno, int calificacionAlumno) {
     Nodo *ap = new Nodo;
     ap -> nombre = nombreAlumno;
     ap -> calificacion = calificacionAlumno;
-    ap -> siguiente = nullptr;
+    ap -> sig = nullptr;
     return ap;
 }
 
@@ -32,10 +32,10 @@ bool estaVacia(Nodo *frente) {
 void agregar(Nodo *&frente, string nombreAlumno, int calificacionAlumno) {
     if (estaVacia(frente) == true) {
         frente = crearNodo(nombreAlumno, calificacionAlumno);
-    } else if (frente -> siguiente == nullptr) {
-        frente -> siguiente = crearNodo(nombreAlumno, calificacionAlumno);
+    } else if (frente -> sig == nullptr) {
+        frente -> sig = crearNodo(nombreAlumno, calificacionAlumno);
     } else {
-        agregar(frente -> siguiente, nombreAlumno, calificacionAlumno);
+        agregar(frente -> sig, nombreAlumno, calificacionAlumno);
     }
 }
 
@@ -56,7 +56,7 @@ void imprimirLista(Nodo *frente) {
     if (frente != nullptr) {
         cout << endl << "\033[93mNombre: \033[0m" << frente -> nombre << endl;
         cout << "\033[93mCalificacion: \033[0m" << frente -> calificacion << endl;
-        imprimirLista(frente -> siguiente);
+        imprimirLista(frente -> sig);
     } else {
         cout << "eNulo" << " ";
     }
@@ -69,7 +69,7 @@ void distribuirGrupo(Nodo *&frente, Nodo *&frenteOrdinario, Nodo *&frenteExtraor
         } else if (frente -> calificacion >= 4 && frente -> calificacion < 6) {
             agregar(frenteExtraordinario, frente -> nombre, frente -> calificacion);
         }
-        distribuirGrupo(frente -> siguiente, frenteOrdinario, frenteExtraordinario);
+        distribuirGrupo(frente -> sig, frenteOrdinario, frenteExtraordinario);
     }
 }
 

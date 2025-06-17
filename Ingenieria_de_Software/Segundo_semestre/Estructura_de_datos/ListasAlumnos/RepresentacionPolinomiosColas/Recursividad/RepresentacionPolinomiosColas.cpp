@@ -5,7 +5,7 @@ using namespace std;
 struct Nodo {
     int coeficiente;
     int exponente;
-    Nodo *siguiente;
+    Nodo *sig;
 };
 
 void inicializar(Nodo *&frente, Nodo *&final) {
@@ -23,12 +23,12 @@ void ingresarTermino(Nodo *&frente, Nodo *&final) {
     Nodo *aux = new Nodo;
     aux -> coeficiente = coeficienteAux;
     aux -> exponente = exponenteAux;
-    aux -> siguiente = nullptr;
+    aux -> sig = nullptr;
 
     if (final == nullptr) {
         frente = aux;
     } else {
-        final -> siguiente = aux;
+        final -> sig = aux;
     }
     final = aux;
     cout << endl;
@@ -45,7 +45,7 @@ int potencia(int b, int e) {
 void insertarPolinomio(Nodo *&frente, Nodo *&final, int nTerminos) {
     if (nTerminos != 0) {
         ingresarTermino(frente, final);
-        insertarPolinomio(frente -> siguiente, final, nTerminos-1);
+        insertarPolinomio(frente -> sig, final, nTerminos-1);
     }
 }
 
@@ -59,7 +59,7 @@ void desplegarPolinomio(Nodo *frente, bool primerTermino) {
         } else {
             cout << frente->coeficiente << "x^" << frente->exponente;
         }
-        desplegarPolinomio(frente->siguiente, false);
+        desplegarPolinomio(frente->sig, false);
     }
 }
 int evaluarPolinomio(Nodo *frente, int x) {
@@ -67,7 +67,7 @@ int evaluarPolinomio(Nodo *frente, int x) {
         return 0;
     } else {
         return frente->coeficiente * potencia(x, frente->exponente) + 
-        evaluarPolinomio(frente->siguiente, x);
+        evaluarPolinomio(frente->sig, x);
     }
 }
 

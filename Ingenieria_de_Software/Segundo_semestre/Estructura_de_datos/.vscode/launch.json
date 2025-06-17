@@ -33,8 +33,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Ingenieria_de_Software/Ingenieria_de_Software/Segundo_semestre/Estructura_de_datos/Pilas/Palindromo",
-      "program": "c:/Ingenieria_de_Software/Ingenieria_de_Software/Segundo_semestre/Estructura_de_datos/Pilas/Palindromo/build/Debug/outDebug",
+      "cwd": "c:/Ingenieria_de_Software/Ingenieria_de_Software/Segundo_semestre/Estructura_de_datos/Arboles/ArbolBinarioBusqueda/ContarNumeroNodos",
+      "program": "c:/Ingenieria_de_Software/Ingenieria_de_Software/Segundo_semestre/Estructura_de_datos/Arboles/ArbolBinarioBusqueda/ContarNumeroNodos/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
